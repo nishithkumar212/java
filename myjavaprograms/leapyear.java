@@ -9,27 +9,15 @@ public class leapyear
 	{
 		Boolean status;
     
-    System.out.println("enter the number to know leap year or not");
+    System.out.println("enter the year to know leap year or not");
     int a=utility.getint();
-    if(a%400==0)
+    if((a%400==0|| a%100==0)&&(a%4==0))
     {
-    	status=true;
-    }
-    else if(a%100==0)
-    {
-       status =false;
-    }
-    else if(a%4==0)
-	{
-		status=true;
-	}
-    if(status=true)
-    {
-    	System.out.println("given number is a leap year");
+    	System.out.println("its a leap year");
     }
     else
     {
-    	System.out.println("given number is not a leap year");
+    	System.out.println("given year is not a leap year");
     }
 	}
 }

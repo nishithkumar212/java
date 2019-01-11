@@ -105,8 +105,6 @@ public void choice(int a)
 	case 3:print();
 }
 }
-	
-
 	public static void main(String[] args)
 	{		
 cashcounter obj=new cashcounter();

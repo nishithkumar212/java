@@ -48,10 +48,14 @@ public static void main(String[] args) throws FileNotFoundException
 		Object object1=jp.parse(fr);
 		            JSONArray array1 =(JSONArray)object1;
 		            System.out.println(array1);
+		            array1.forEach( emp -> parseData( (JSONObject) emp ));
 	} catch (IOException | ParseException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
+}
+	public static void parseData(JSONObject array1 )
+	{
 }
 }
 

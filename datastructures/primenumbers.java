@@ -26,11 +26,11 @@ for(int i=0;i<=arr.length-1;i++)
 {
 	System.out.print(arr[i]);
 }
-int[][] todi= new int[1][100];
-for(int k=0;k<1;k++)
+int[][] todi= new int[1][25];
+for(int k=0;k<todi.length-1;k++)
 {
 	int x=0;
-	for(int l=0;l<todi.length-1;l++)
+	for(int l=0;l<25;l++)
 	{
 		todi[k][l]=arr[x];
 		x++;

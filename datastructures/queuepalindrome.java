@@ -1,21 +1,20 @@
 package datastructures;
-import java.util.List;
-import datastructures.linkedlist.Node;
-public class queue 
+import datastructures.queue.Node;
+public class queuepalindrome 
 {
 	Node front;
 	Node rear;
 	int length;
-	queue()
+	queuepalindrome()
 	{
 		this.front =null;
 		this.rear=null;
 	}
 class Node
 {
-	int data;
+	char data;
 	Node next;
-	Node(int data)
+	Node(char data)
 	{
 		this.data=data;
 		this.next=null;
@@ -29,7 +28,7 @@ public boolean isempty()
 {
 	return length==0;
 }
-public void enque(int data)
+public void enque(char data)
 {
 Node temp=new Node(data);
 	if(isempty())
@@ -60,15 +59,15 @@ public void print()
 		System.out.println(current.data);
 		current=current.next;
 	}
-	System.out.println("null");
+
 }
-public int deque()
+public char deque()
 {
 	if(isempty())
 	{
 		
 	}
-	int result=front.data;
+	char result=front.data;
 	front=front.next;
 	if(front==null)
 	{
@@ -78,23 +77,4 @@ public int deque()
 	return result;
 	
 }
-public static void main(String[] args)
-{
-	queue obj=new queue();
-	obj.enque(5);
-	obj.enque(10);
-	obj.enque(15);
-	obj.enque(20);
-	obj.print();
-	obj.deque();
-	obj.deque();
-	obj.deque();
-	System.out.println("the length of queue is"+obj.length());
-}
-}
-
-
-
-
-
-
+} 

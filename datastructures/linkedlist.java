@@ -85,6 +85,7 @@ public void deletenode(int key)
 {
 	Node temp=head;
 	Node previous=null;
+
 	if(temp!=null && temp.data==key)
 	{
 		head=temp.next;
