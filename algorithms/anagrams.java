@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class anagrams
 {
 	static String str1="madam";
-	static String str2="adamm";
+	static String str2="adam";
 public static void main(String[] args)
 {
 char[] a=	str1.toCharArray();

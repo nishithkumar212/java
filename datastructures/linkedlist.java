@@ -1,5 +1,6 @@
 package datastructures;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -116,12 +117,14 @@ public static void main(String[] args) throws IOException
 {
 /*String line=null;
 	String[] arr = null;
+	File f=new File("link.txt");
+	f.createNewFile();
 FileInputStream fis=new FileInputStream("link.txt");
 InputStreamReader is=new InputStreamReader(fis);
 BufferedReader br=new BufferedReader(is);
 while((line = br.readLine())!=null) 
 {
-arr=line.split("");
+arr=line.split(" ");
 }
 int arr1[] = new int[arr.length];
 for(int i=0;i<=arr.length-1;i++)
@@ -130,9 +133,10 @@ arr1[i]=Integer.parseInt(arr[i]);
 }
 for(Integer sdaf:arr1) {
 	System.out.println(sdaf);
-}*/
-System.out.println();
+}
+System.out.println();*/
 linkedlist obj=new linkedlist();
+
 obj.add(13);
 obj.add(67);
 obj.add(6);

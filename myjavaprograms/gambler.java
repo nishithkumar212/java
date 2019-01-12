@@ -12,25 +12,22 @@ public static void main(String[] args)
 	int trials=utility.getint();
 	int wins=0;
 	int bets=0;
-	for(int i=1;i<=trials;i++)
-	{
+	for(int i=1;i<=trials;i++){
 		int cash=stake;
-		while(cash>0&&cash<goal)
-		{
+		while(cash>0&&cash<goal){ 
 			bets++;
-		if(Math.random()<0.5)
-		{
-			cash++;
+			
+			if(Math.random()<0.5){
+				cash++;
+			}
+			else{
+				cash--;
+			}
 		}
-		else
-		{
-			cash--;
+		
+		if(cash>=goal){
+			wins++;
 		}
-		}
-	if(cash==goal)
-	{
-		wins++;
-	}
 	}
 System.out.println(wins+"wins of"+trials);
 System.out.println("win percentage is" +100.0*wins/trials);

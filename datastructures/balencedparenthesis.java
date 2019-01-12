@@ -6,7 +6,7 @@ public class balencedparenthesis
 	{	
 		int count=0;
 		stack sk=new stack();
-String s="(5+6))";
+String s="((((5+6";
 for(int i=0;i<=s.length()-1;i++)
 {
 	char a=s.charAt(i);

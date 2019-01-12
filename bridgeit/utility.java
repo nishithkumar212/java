@@ -226,7 +226,7 @@ public static void bubblesortinteger(int[] arr)
 	}
 	utility.bubblesortinteger(brr);
 	}
-	public  static void datecalculate(int m,int d,int y)
+	public  static int  datecalculate(int m,int d,int y)
 	{
 		int y0;
 		int x;
@@ -253,6 +253,7 @@ break;
 case 6:System.out.println("the day falls on:saturday");
 break;
 }
+return d0;
 }
 public static void   temperatureconvert(double  temp)
 {
@@ -351,4 +352,42 @@ return mid;
 }
 return -1;
 }
+public static int[][] printcalender(int month,int yr) {
+	int d = datecalculate(1, month, yr);
+	System.out.println(d);
+	 int[][] calender = new int[6][7];
+	 int length = calender[5].length;
+	 System.out.println(length);
+	 int months[] = {31,28,30,31,30,31,30,31,30,31,30,31};
+	 String[] monthname = {"","January", "February", "March","April", "May", "June","July", "August", "September","October", "November", "December"	          };
+		for(int i=0;i<calender.length;i++) {
+			for(int j=0;j<calender[i].length;j++) {
+				calender[i][j] = -1;
+			}
+}
+		int dateinc=1;
+		for(int i=d;i<calender[0].length;i++) {
+			calender[0][i]=dateinc++;
+		}
+		for(int j=1;j<calender.length;j++) {
+			for(int k=0;k<calender[j].length;k++) {
+				calender[j][k] = dateinc++;
+			}
+		}
+		System.out.println("\t\t\t"+monthname[month]+"  "+yr);
+		System.out.println();
+		System.out.println( "        S       M       Tu       W      Th      F      Sa  ");
+		for(int i=0;i<calender.length;i++) {
+			for(int j=0;j<calender[i].length;j++) {
+				if(calender[i][j]<0||(calender[i][j]>months[month-1])) {
+					System.out.print("\t");
+				}else if(calender[i][j]>0) {
+					System.out.print("\t"+calender[i][j]+" ");
+				}
+			}
+			System.out.println("\t");
+		}
+return calender;
+}
 	}
+
