@@ -33,7 +33,6 @@ notanagrams.addAll(al);
 		}
 	Integer notarr[] = notanagrams.toArray(new Integer[notanagrams.size()]);
 	Integer anagram[] = anagrams.toArray(new Integer[anagrams.size()]);
-	
 int m = 2;
 int n = 158;
 int ana[][] = new int[m][n];

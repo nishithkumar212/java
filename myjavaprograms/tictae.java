@@ -11,7 +11,7 @@ public class tictae
 	public void display()
 	{
       for(int i=0;i<=arr.length-1;i++)
-      {
+      {                               
     	  for(int j=0;j<=arr.length-1;j++)
     	  {
     		  System.out.print(arr[i][j]= '-');
@@ -50,7 +50,7 @@ public class tictae
 	{
 		System.out.println("enter the number of rows from 0-2");
 int urow=utility.getint();
-System.out.println("enter the number of columns from o-2");
+System.out.println("enter the number of columns from 0-2");
 int ucol=utility.getint();
 		if(arr[urow][ucol]=='-')
 		{

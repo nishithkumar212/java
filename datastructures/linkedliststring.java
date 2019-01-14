@@ -60,7 +60,7 @@ public boolean search(String s)
 	
 	while(!(n.equals(null)))
 	{
-		if(n.data.equals(s))
+		if((n.data).equals(s))
 		{
 			return true;
 		}

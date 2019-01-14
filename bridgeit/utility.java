@@ -8,6 +8,8 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Random;
 import java.util.Scanner;
 public class utility 
 	{
@@ -356,8 +358,6 @@ public static int[][] printcalender(int month,int yr) {
 	int d = datecalculate(1, month, yr);
 	System.out.println(d);
 	 int[][] calender = new int[6][7];
-	 int length = calender[5].length;
-	 System.out.println(length);
 	 int months[] = {31,28,30,31,30,31,30,31,30,31,30,31};
 	 String[] monthname = {"","January", "February", "March","April", "May", "June","July", "August", "September","October", "November", "December"	          };
 		for(int i=0;i<calender.length;i++) {
@@ -387,7 +387,80 @@ public static int[][] printcalender(int month,int yr) {
 			}
 			System.out.println("\t");
 		}
-return calender;
+		return calender;
+}
+	public static String[][] cards(String[][] card,String[] suit,String[] rank){
+		for(int i=0;i<suit.length;i++)
+		{
+			for(int j=0;j<rank.length;j++)
+			{
+				card[i][j]=suit[i]+""+rank[j];
+			}
+		}
+	return card;
+}
+	public static String[][]shufflecards(String[][] card,String[] suit,String[] rank){
+		for(int i=0;i<suit.length;i++) {
+			for(int j=0;j<=suit.length;j++) {
+				int rand1=(int)(Math.random()*suit.length);
+				int rand2=(int)(Math.random()*rank.length);
+					String temp=card[rand1][rand2];
+					card[rand1][rand2]=card[i][j];
+					card[i][j]=temp;			
+				}
+			}
+		return card;
+		}
+public static void printCards(String cards[][])
+{
+	for(int i=0;i<4;i++)
+	{
+		System.out.println("player"+ i);
+		for(int j=0;j<9;j++)
+		{
+			System.out.print(cards[i][j]+"-");
+		}
+		System.out.println();
+	}
+}
+public static String[][] distributecards(LinkedList[] cards)
+{
+	Random rd=new Random();
+	String[][] players=new String[4][9];
+	for(int i=0;i<4;i++)
+	{
+		for(int j=0;j<9;j++)
+		{
+			int pos=rd.nextInt(51);
+			if(!cards[pos].isEmpty())
+			{
+				players[i][j]=(String)cards[pos].pop();
+			}
+		}
+	}
+	return null;
+		
+	
 }
 	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

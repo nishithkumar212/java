@@ -24,7 +24,7 @@ public void add(int a)
 	Node new_node=new Node(a);
 	if(head==null)
 	{
-		head=new Node(a);
+		head=new_node;
 		return;
 	}
 	else
@@ -115,7 +115,8 @@ public void show()
 }
 public static void main(String[] args) throws IOException
 {
-/*String line=null;
+	linkedlist obj=new linkedlist();
+String line=null;
 	String[] arr = null;
 	File f=new File("link.txt");
 	f.createNewFile();
@@ -130,23 +131,9 @@ int arr1[] = new int[arr.length];
 for(int i=0;i<=arr.length-1;i++)
 {
 arr1[i]=Integer.parseInt(arr[i]);
+obj.add(arr1[i]);
 }
-for(Integer sdaf:arr1) {
-	System.out.println(sdaf);
-}
-System.out.println();*/
-linkedlist obj=new linkedlist();
-
-obj.add(13);
-obj.add(67);
-obj.add(6);
-obj.add(23);
-obj.add(7);
-obj.add(90);
-obj.deletefirstnode(13);
-obj.show();
 System.out.println();
-obj.insertafter(3, 97);
 obj.show();
 System.out.println("enter the element from above reference");
 int a=utility.getint();
@@ -158,10 +145,6 @@ if(res==1)
 else if(res==-1)
 {
 	obj.add(a);
-}
-else
-{
-	System.out.println("there are no elements in linkedlist");
 }
 System.out.println("after performing operation");
 obj.show();
